@@ -55,12 +55,9 @@ class NotesList extends StatelessWidget {
 
                     const SizedBox(height: 5),
 
-                    Text(
-                      note.text,
-                      style: TextStyle(
-                        color: foregroundColor,
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
+                    RichText(
+                      text: TextSpan(
+                        children: _buildHighlightedText(note.text),
                       ),
                     ),
                   ],
@@ -79,4 +76,59 @@ class NotesList extends StatelessWidget {
       },
     );
   }
+}
+
+List<TextSpan> _buildHighlightedText(String text) {
+  final List<TextSpan> spans = [];
+
+  final regex = RegExp(r'\|(.*?)\|');
+
+  int lastEnd = 0;
+
+  for (final match in regex.allMatches(text)) {
+    // Normal text before highlighted section
+    if (match.start > lastEnd) {
+      spans.add(
+        TextSpan(
+          text: text.substring(lastEnd, match.start),
+          style: TextStyle(
+            color: foregroundColor,
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      );
+    }
+
+    // Highlighted text (without | symbols)
+    spans.add(
+      TextSpan(
+        text: match.group(1),
+        style: TextStyle(
+          color: foregroundColor,
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+          backgroundColor: accentColor.withOpacity(0.5),
+        ),
+      ),
+    );
+
+    lastEnd = match.end;
+  }
+
+  // Remaining text after last match
+  if (lastEnd < text.length) {
+    spans.add(
+      TextSpan(
+        text: text.substring(lastEnd),
+        style: TextStyle(
+          color: foregroundColor,
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    );
+  }
+
+  return spans;
 }
