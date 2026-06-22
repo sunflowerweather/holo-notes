@@ -100,7 +100,7 @@ List<TextSpan> _buildHighlightedText(String text) {
       );
     }
 
-    // Highlighted text (without | symbols)
+
     spans.add(
       TextSpan(
         text: match.group(1),

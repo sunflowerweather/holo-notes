@@ -19,73 +19,153 @@ void showLongPressOptions(
         title: Text(
           'Manage $noteTitle',
           style: TextStyle(color: foregroundColor),
+          textAlign: TextAlign.center,
         ),
 
 
         actions: <Widget>[
+          Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
 
-          // CANCEL
-          TextButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
 
-            child: Text(
-              'Cancel',
-              style: TextStyle(
-                color: accentColor,
-              ),
+                // CANCEL
+                SizedBox(
+                  width: 40,
+                  height: 40,
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    style: ButtonStyle(
+                      backgroundColor:
+                      WidgetStatePropertyAll(background1Color),
+                      shape: WidgetStatePropertyAll(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(1.0),
+                          side: BorderSide(
+                            color: accentColor,
+                            width: 1.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                    child: Icon(
+                      Icons.close,
+                      color: accentColor,
+                      size: 20,
+                    ),
+                  ),
+                ),
+
+                const SizedBox(width: 8),
+
+                // Favourite
+                SizedBox(
+                  width: 40,
+                  height: 40,
+                  child: TextButton(
+                    onPressed: () {
+
+                      onFavourite();
+
+                      Navigator.of(context).pop();
+                    },
+                    style: ButtonStyle(
+                      backgroundColor:
+                      WidgetStatePropertyAll(background1Color),
+                      shape: WidgetStatePropertyAll(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(1.0),
+                          side: BorderSide(
+                            color: accentColor,
+                            width: 1.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                    child: Icon(
+                      isFavourited ? Icons.star : Icons.star_border,
+                      color: accentColor,
+                      size: 20,
+                    ),
+                  ),
+                ),
+
+                const SizedBox(width: 8),
+
+                // Delete
+                SizedBox(
+                  width: 40,
+                  height: 40,
+                  child: TextButton(
+                    onPressed: () {
+
+                      onDelete();
+
+                      Navigator.of(context).pop();
+                    },
+                    style: ButtonStyle(
+                      backgroundColor:
+                      WidgetStatePropertyAll(background1Color),
+                      shape: WidgetStatePropertyAll(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(1.0),
+                          side: BorderSide(
+                            color: accentColor,
+                            width: 1.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                    child: Icon(
+                      Icons.delete_forever,
+                      color: accentColor,
+                      size: 20,
+                    ),
+                  ),
+                ),
+
+                const SizedBox(width: 8),
+
+                // Delete
+                SizedBox(
+                  width: 40,
+                  height: 40,
+                  child: TextButton(
+                    onPressed: () {
+
+                      onShare();
+
+                      Navigator.of(context).pop();
+                    },
+                    style: ButtonStyle(
+                      backgroundColor:
+                      WidgetStatePropertyAll(background1Color),
+                      shape: WidgetStatePropertyAll(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(1.0),
+                          side: BorderSide(
+                            color: accentColor,
+                            width: 1.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                    child: Icon(
+                      Icons.share,
+                      color: accentColor,
+                      size: 20,
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ),
+          )
 
-          // DELETE
-          TextButton(
-            onPressed: () {
 
-              onFavourite();
 
-              Navigator.of(context).pop();
-            },
-
-            child: Text(
-              isFavourited ? 'Unfavourite' : 'Favourite',
-              style: TextStyle(
-                color: accentColor,
-              ),
-            ),
-          ),
-
-          TextButton(
-            onPressed: () {
-
-              onDelete();
-
-              Navigator.of(context).pop();
-            },
-
-            child: Text(
-              'Delete',
-              style: TextStyle(
-                color: accentColor,
-              ),
-            ),
-          ),
-
-          TextButton(
-            onPressed: () {
-
-              onShare();
-
-              Navigator.of(context).pop();
-            },
-
-            child: Text(
-              'Share',
-              style: TextStyle(
-                color: accentColor,
-              ),
-            ),
-          ),
         ],
       );
     },

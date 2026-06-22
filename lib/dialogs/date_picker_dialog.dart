@@ -33,7 +33,7 @@ Future<void> showDatePickerDialog(
             onPrimary: Colors.white,
           ),
 
-          dialogTheme: DialogTheme(
+          dialogTheme: DialogThemeData(
             backgroundColor: background1Color,
           ),
 

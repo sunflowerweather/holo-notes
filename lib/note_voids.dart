@@ -78,12 +78,13 @@ void shareNote({
 
   final note = days[dateString]!.notes[index];
 
-  final String shareText = '''
+  String shareText = '''
 ${note.title}
 ${note.text}
 
 sent from Holo Notes
 ''';
+  shareText = shareText.replaceAll('|', '');
 
   Share.share(shareText);
 }

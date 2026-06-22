@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // Required import
+import 'package:holo_notes/dialogs/highlighted_words_dialog.dart';
 import 'package:holo_notes/dialogs/longpressdialog.dart';
 import 'package:holo_notes/dialogs/settingsdialog.dart';
 import 'package:holo_notes/service/convert_date.dart';
@@ -129,6 +130,17 @@ class _MyHomePageState extends State<MyHomePage> {
   void showFavDialog()
   {
     showFavouritesDialog(
+      context: context,
+      days: days,
+      dateString: dateString,
+      onChangeDate: changeDate,
+    );
+
+  }
+
+  void showHighlDialog()
+  {
+    showHighlightedDialog(
       context: context,
       days: days,
       dateString: dateString,
@@ -290,6 +302,34 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                               child: Icon(
                                 Icons.star_border,
+                                color: theme.accentColor,
+                                size: 20,
+                              ),
+                            ),
+                          ),
+
+                          const SizedBox(width: 8),
+
+                          SizedBox(
+                            width: 40,
+                            height: 40,
+                            child: TextButton(
+                              onPressed: showHighlDialog,
+                              style: ButtonStyle(
+                                backgroundColor:
+                                WidgetStatePropertyAll(theme.background1Color),
+                                shape: WidgetStatePropertyAll(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(1.0),
+                                    side: BorderSide(
+                                      color: theme.accentColor,
+                                      width: 1.0,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              child: Icon(
+                                Icons.bookmark_border,
                                 color: theme.accentColor,
                                 size: 20,
                               ),
