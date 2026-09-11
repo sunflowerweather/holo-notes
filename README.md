@@ -1,94 +1,76 @@
 # Holo Notes
 
-> A simple, fully offline notes app I built in Flutter — no ads, no clutter, no internet needed.
+A simple offline notes app built with Flutter.
 
-I created Holo Notes because I wanted a straightforward place to write and organize my thoughts without distractions. No ads, no tracking, no features I don't need. Just a clean app that actually works the way you'd want it to.
+No account, ads, tracking, or cloud sync. Notes are stored locally on the device.
 
----
+## Features
 
-## ✨ What It Does
+### Offline
 
-### **Fully Offline**
-Your notes stay on your phone. I didn't add internet sync features because I didn't want to deal with servers, and honestly, you probably don't need them. Everything works offline, period.
+Holo Notes works entirely offline. Notes are stored locally and the app does not require an internet connection.
 
-### **No Bloat**
-I built this with a simple rule: if it's not useful, it doesn't go in. No ads, no AI, no random notifications. Just a notes app that does what it should and gets out of your way.
+### Themes
 
-### **Pick Your Theme**
-I spent time creating a bunch of dark and light themes because using an app you don't like looking at is annoying. Browse through them in Settings and find the one that actually feels right to you.
+The app includes multiple light and dark themes. Themes can be changed from the Settings screen.
 
-### **Highlight What Matters**
-If you want to mark important parts of your notes, I made it simple: put pipes around the text. Like this: `Hey, |this part matters|, remember?`. Then tap the bookmarks button to pull up everything you've highlighted across all your notes.
+### Highlights
 
-### **Easy to Get Around**
-- **Swipe left or right** to jump between yesterday and tomorrow
-- **Tap the date** at the top to jump to a specific day
-- **Star icon** shows all your favorite notes
-- **Bookmark icon** shows all your highlighted passages
+Parts of a note can be highlighted by surrounding them with `|` characters:
 
-### **Quick Actions**
-Long-press any note and you can:
-- Delete it
-- Share it with someone
-- Mark it as a favorite
-
-### **Backup Your Stuff**
-Export your notes as a JSON file whenever you want. If you ever switch phones or lose your data, you can restore everything from the backup. I built this because losing notes sucks.
-
-### **Reasonable Limits**
-- Note titles: 30 characters
-- Note content: 3,000 characters
-
-I picked these limits because they make sense for notes — long enough to be useful, short enough to keep you focused.
-
----
-
-## 🚀 How to Use It
-
-### Getting Started
-Install the app and start writing. No login required, no setup. Just open it and go.
-
-### Creating and Finding Notes
-Your notes are organized by date. Swipe through days or tap the date to jump to a specific one. Everything saves automatically.
-
-### Using Highlights
-Want to mark something as important? Wrap it with pipes:
-```
-This is important: |remember to do this thing| today.
+```text
+Remember to |buy new strings| tomorrow.
 ```
 
-Now tap the bookmark icon to see all your highlighted text at a glance.
+Highlighted passages can be viewed together using the bookmarks button.
 
-### Managing Notes
-Long-press a note to delete it, share it, or favorite it. The star icon at the bottom shows all your favorites in one place.
+### Navigation
 
-### Choosing a Look
-Head to Settings and scroll through the themes. There's a lot to choose from — light, dark, whatever you like.
+Notes are organized by date.
 
-### Backing Up Your Notes
-I added an export feature so you can save all your notes to a JSON file. Import it back anytime if you need to restore things. Simple backup and restore, no cloud nonsense.
+* Swipe left or right to move between days
+* Tap the date at the top to select a specific day
+* Use the star button to view favorite notes
+* Use the bookmark button to view highlighted passages
 
----
+### Note Actions
 
-## 🛠️ What's Under the Hood
+Long-pressing a note gives you options to:
 
-- **Flutter** — The app framework
-- **Dart** — Main language
-- **C++ & CMake** — For the fast parts
-- **Apache 2.0 License** — Open source
+* Delete it
+* Share it
+* Add or remove it from favorites
 
----
+### Backup and Restore
 
-## 💭 Why I Built This
+Notes can be exported to a JSON file and imported later. This can be used for backups or moving your notes to another device.
 
-I got tired of note apps that do too much. Stuff I don't need, features that get in the way, constant syncing, ads everywhere. I wanted something minimal and actually useful, so I built Holo Notes for myself. Turns out it works pretty well, so I'm sharing it.
+### Limits
 
----
+* Note title: 30 characters
+* Note content: 3,000 characters
 
-## 📝 License
+## Getting Started
 
-Apache License 2.0 — do what you want with it.
+Install the app and start writing. No account or setup is required.
 
----
+Notes are saved automatically.
 
-**That's it.** Just a solid notes app with no nonsense.
+## Backup
+
+To back up your notes, export them from the app as a JSON file. The same file can be imported later to restore the notes.
+
+## Technologies
+
+* [Flutter](https://flutter.dev/)
+* Dart
+* C++ / CMake
+* Apache License 2.0
+
+## Why?
+
+I wanted a notes app that stayed out of the way and didn't require an account or internet connection. Holo Notes started as a personal project and is now available as an open-source app.
+
+## License
+
+Licensed under the Apache License 2.0.
