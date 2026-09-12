@@ -4,6 +4,10 @@ A simple offline notes app built with Flutter.
 
 No account, ads, tracking, or cloud sync. Notes are stored locally on the device.
 
+![Main screen](readme/holonotes_preview_1.jpg)
+![Settings](readme/holonotes_preview_1.jpg)
+![Highlights](readme/holonotes_preview_1.jpg)
+
 ## Downloads
 
 - [Android - v1.0](https://github.com/sunflowerweather/holo-notes/releases/tag/v1.0-android)
