@@ -4,9 +4,11 @@ A simple offline notes app built with Flutter.
 
 No account, ads, tracking, or cloud sync. Notes are stored locally on the device.
 
-![Main screen](readme/holonotes_preview_1.jpg)
-![Settings](readme/holonotes_preview_1.jpg)
-![Highlights](readme/holonotes_preview_1.jpg)
+<p align="center">
+  <img src="screenshots/holonotes_preview_1.jpg" width="30%">
+  <img src="screenshots/holonotes_preview_2.jpg" width="30%">
+  <img src="screenshots/holonotes_preview_3.jpg" width="30%">
+</p>
 
 ## Downloads
 
