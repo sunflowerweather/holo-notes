@@ -6,8 +6,8 @@ No account, ads, tracking, or cloud sync. Notes are stored locally on the device
 
 ## Downloads
 
-- [Android - v1.0](https://github.com/timuryu-afk/holo-notes/releases/tag/v1.0-android)
-- [Windows - v1.0](https://github.com/timuryu-afk/holo-notes/releases/tag/v1.0-windows)
+- [Android - v1.0](https://github.com/sunflowerweather/holo-notes/releases/tag/v1.0-android)
+- [Windows - v1.0](https://github.com/sunflowerweather/holo-notes/releases/tag/v1.0-windows)
 
 ## Features
 
