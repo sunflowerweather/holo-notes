@@ -76,7 +76,7 @@ To back up your notes, export them from the app as a JSON file. The same file ca
 * [Flutter](https://flutter.dev/)
 * Dart
 * C++ / CMake
-* Apache License 2.0
+* BSD-3-Clause license
 
 ## Why?
 
@@ -84,4 +84,4 @@ I wanted a notes app that stayed out of the way and didn't require an account or
 
 ## License
 
-Licensed under the Apache License 2.0.
+Licensed under the BSD-3-Clause license.
